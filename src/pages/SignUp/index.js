@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import api from "../../services/api";
+import { Container } from "./styles";
 
 
 const SignUp = () => {
@@ -36,22 +37,24 @@ const SignUp = () => {
 
   return (
     <>
+          <Container>
       <form>
       <label>
           Name:
-          <input type="text" name="name" value={name} onChange={e=> setName(e.target.value)} />
         </label>
+          <input type="text" name="name" value={name} onChange={e=> setName(e.target.value)} />
       <label>
           Email:
-          <input type="text" name="email" value={email} onChange={e=> setEmail(e.target.value)}/>
         </label>
+          <input type="text" name="email" value={email} onChange={e=> setEmail(e.target.value)}/>
         <label>
           Password:
-          <input type="password" name="password" value={password} onChange={e=> setPassword(e.target.value)} />
         </label>
+          <input type="password" name="password" value={password} onChange={e=> setPassword(e.target.value)} />
         <button type="submit" onClick={handleSubmit}>Sign up</button>
-      </form>
       {message === true && <span>Dados incorretos</span>}
+      </form>
+      </Container>
     </>
     
   );

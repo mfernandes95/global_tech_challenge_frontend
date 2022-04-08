@@ -1,84 +1,51 @@
-// import styled, { keyframes } from 'styled-components';
+import styled from "styled-components";
 
-// import signUpBackgroundImg from '../../assets/sign-up-background.png';
+export const Container = styled.form`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-// const appearFromRight = keyframes`
-//   from {
-//       opacity: 0;
-//       transform: translateX(50px);
-//   }
-//   to{
-//     opacity: 1;
-//     transform: translateX(0px);
-//   }
-// `;
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: #ff6961;
+    padding: 100px;
+    border-radius: 20px;
 
-// export const AnimationContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
+    label {
+      font-size: 20px;
+      color: #fff;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
 
-//   animation: ${appearFromRight} 1s;
+    input {
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      padding: 6% 4%;
+      width: 300px;
+    }
 
-//   form {
-//     margin: 80px 0;
-//     width: 340px;
-//     text-align: center;
+    #password {
+      margin: 15px 0px 0px 0px;
+    }
 
-//     h1 {
-//       margin-bottom: 24px;
-//     }
-//     a {
-//       color: #f4ede8;
-//       display: block;
-//       margin-top: 24px;
-//       text-decoration: none;
-//       transition: color 0.2s;
-//       &:hover {
-//         color: ${shade(0.2, '#f4ede8')};
-//       }
-//     }
-//   }
-//   > a {
-//     color: #f4ede8;
-//     display: block;
-//     margin-top: 24px;
-//     text-decoration: none;
-//     transition: color 0.2s;
+    button {
+      margin-top: 15px;
+      height: 40px;
+      width: 320px;
+      background-color: #fff;
+      color: #ff6961;
+    }
 
-//     display: flex;
-//     align-items: center;
-
-//     svg {
-//       margin-right: 16px;
-//     }
-
-//     &:hover {
-//       color: ${shade(0.2, '#f4ede8')};
-//     }
-//   }
-// `;
-
-// export const Container = styled.div`
-//   height: 100vh;
-
-//   display: flex;
-//   align-items: stretch;
-// `;
-
-// export const Content = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-
-//   width: 100%;
-//   max-width: 700px;
-// `;
-
-// export const Background = styled.div`
-//   flex: 1;
-//   background: url(${signUpBackgroundImg}) no-repeat center;
-//   background-size: cover;
-// `;
+    span {
+      color: #f6cb7c;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+    }
+    }
+`;
